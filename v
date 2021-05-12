@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -v
+set -e
 if [ $# -eq 0 ]; then
     echo 'usage: v start|stop ...'
     exit 1
