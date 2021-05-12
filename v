@@ -10,7 +10,7 @@ if [ $1 = 'start' ]; then
     else
         name=container-$2
     fi 
-    docker run --name $name --rm -v /root/.container:/root:delegated -v /root/.ssh:/root/.ssh:delegated $name bash -c "while true; do sleep 1000; done" &
+    docker run --name $name --rm -v /root/.container:/root:delegated -v /root/.ssh:/root/.ssh:delegated dujiaju/$name bash -c "while true; do sleep 1000; done" &
 fi
 if [ $1 = 'stop' ]; then
     if [ $# -lt 2]; then
@@ -21,5 +21,5 @@ if [ $1 = 'stop' ]; then
     else
         name=container-$2
     fi 
-    docker stop $name
+    docker stop dujiaju/$name
 fi
