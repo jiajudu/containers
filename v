@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -e
+set -x
 if [ $# -eq 0 ]; then
     echo 'usage: v start|stop ...'
     exit 1
@@ -10,12 +10,9 @@ if [ $1 = 'start' ]; then
     else
         name=container-$2
     fi 
-    docker run --name $name --rm -v /root/.container:/root:delegated -v /root/.ssh:/root/.ssh:delegated dujiaju/$name bash -c "while true; do sleep 1000; done" &
+    docker run --name $name --rm -v /root/:/root:delegated dujiaju/$name bash -c "while true; do sleep 1000; done"
 fi
 if [ $1 = 'stop' ]; then
-    if [ $# -lt 2]; then
-        echo "usage: v stop name"
-    fi
     if [ $# -eq 1 ]; then
         name='container'
     else
