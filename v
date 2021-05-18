@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 set -x
 if [ $# -eq 0 ]; then
     echo 'usage: v start|stop ...'
