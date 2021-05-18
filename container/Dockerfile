@@ -41,5 +41,6 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y nginx && \
     apt install -y mysql-server && \
     apt install -y redis-server && \
+    apt install -y unzip && \
     apt clean autoclean && \
     apt autoremove --yes
