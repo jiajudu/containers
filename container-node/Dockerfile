@@ -1,2 +1,6 @@
 from dujiaju/container
-RUN npm install -g hexo
+RUN apt install -y nodejs && \
+    apt install -y npm && \
+    npm install -g hexo && \
+    apt clean autoclean && \
+    apt autoremove --yes

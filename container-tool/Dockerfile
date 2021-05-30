@@ -1,5 +1,11 @@
 from dujiaju/container
 RUN apt install -y xarclock && \
+    apt install -y net-tools && \
+    apt install -y iputils-ping && \
+    apt install -y iproute2 && \
+    apt install -y graphviz && \
+    apt install -y man-db && \
+    apt install -y unrar && \
     apt install -y ocl-icd-opencl-dev && \
     apt install -y opencl-headers && \
     apt install -y libopencv-dev && \

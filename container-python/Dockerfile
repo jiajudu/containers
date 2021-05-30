@@ -1,5 +1,7 @@
 from dujiaju/container
-RUN apt install -y python3-tk && \
+RUN apt install -y python3 && \
+    apt install -y python3-pip && \
+    apt install -y python3-tk && \
     ln -s /usr/bin/python3 /usr/local/bin/python && \
     ln -s /usr/bin/pip3 /usr/local/bin/pip && \
     pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && \
@@ -11,26 +13,12 @@ RUN apt install -y python3-tk && \
     pip install pylint && \
     pip install future && \
     pip install bs4 && \
-    pip install numpy && \
     pip install autopep8 && \
     pip install fire && \
     pip install fuzzywuzzy && \
-    pip install Keras && \
-    pip install matplotlib && \
     pip install networkx && \
-    pip install nltk && \
-    pip install pandas && \
     pip install Pillow && \
-    pip install pytorch-pretrained-bert && \
     pip install redis && \
-    pip install scikit-image && \
-    pip install sklearn && \
-    pip install scipy && \
-    pip install sklearn && \
-    pip install tensorboard && \
-    pip install tensorboardX && \
-    pip install tensorflow && \
-    pip install torch && \
     pip install Cython && \
     pip install ply && \
     pip install protobuf && \
