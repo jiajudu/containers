@@ -12,6 +12,7 @@ docker build -t dujiaju/container-go container-go/
 docker build -t dujiaju/container-haskell container-haskell/
 docker build -t dujiaju/container-latex container-latex/
 docker build -t dujiaju/container-lua container-lua/
+docker build -t dujiaju/container-node container-node/
 docker build -t dujiaju/container-php container-php/
 docker build -t dujiaju/container-python container-python/
 docker build -t dujiaju/container-rust container-rust/
