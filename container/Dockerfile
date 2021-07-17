@@ -8,6 +8,7 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y gcc && \
     apt install -y g++ && \
     apt install -y pkg-config && \
+    apt install -y libtool && \
     apt install -y gdb && \
     apt install -y make && \
     apt install -y locales && \
@@ -18,13 +19,13 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y tmux && \
     apt install -y curl && \
     apt install -y wget && \
-    apt install -y telnet && \
     apt install -y strace && \
-    apt install -y tcpdump && \
     apt install -y lsof && \
-    apt install -y libcurl4-openssl-dev && \
-    apt install -y netcat && \
     apt install -y unzip && \
+    apt install -y libprotobuf-dev && \
+    apt install -y protobuf-compiler && \
+    apt install -y libboost-all-dev && \
+    apt install -y clang-format && \
     locale-gen en_US.UTF-8 && \
     echo "LANG=en_US.UTF-8" >> /etc/environment && \
     echo "LANGUAGE=en_US.UTF-8" >> /etc/environment && \

@@ -1,6 +1,10 @@
 from dujiaju/container
 RUN apt install -y xarclock && \
     apt install -y net-tools && \
+    apt install -y telnet && \
+    apt install -y tcpdump && \
+    apt install -y libcurl4-openssl-dev && \
+    apt install -y netcat && \
     apt install -y iputils-ping && \
     apt install -y iproute2 && \
     apt install -y graphviz && \
