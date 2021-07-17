@@ -10,6 +10,7 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y pkg-config && \
     apt install -y gdb && \
     apt install -y make && \
+    apt install -y locales && \
     apt install -y cmake && \
     apt install -y git && \
     apt install -y vim && \
@@ -24,5 +25,9 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y libcurl4-openssl-dev && \
     apt install -y netcat && \
     apt install -y unzip && \
+    locale-gen en_US.UTF-8 && \
+    echo "LANG=en_US.UTF-8" >> /etc/environment && \
+    echo "LANGUAGE=en_US.UTF-8" >> /etc/environment && \
+    echo "LC_ALL=en_US.UTF-8" >> /etc/environment && \
     apt clean autoclean && \
     apt autoremove --yes
