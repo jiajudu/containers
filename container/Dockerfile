@@ -22,6 +22,7 @@ RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y strace && \
     apt install -y lsof && \
     apt install -y unzip && \
+    apt install -y cloc && \
     apt install -y libprotobuf-dev && \
     apt install -y protobuf-compiler && \
     apt install -y libboost-all-dev && \
